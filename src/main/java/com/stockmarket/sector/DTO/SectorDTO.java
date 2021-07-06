@@ -11,10 +11,4 @@ public class SectorDTO {
     private Long id;
     private String name;
     private String brief;
-
-    public SectorDTO(Sector sector){
-        id = sector.getId();
-        name = sector.getName();
-        brief = sector.getBrief();
-    }
 }

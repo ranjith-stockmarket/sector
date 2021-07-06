@@ -13,9 +13,6 @@ public interface SectorRepository extends JpaRepository<Sector, Long> {
 
     boolean existsByName(String name);
 
-    @Query("select new com.stockmarket.sector.DTO.SectorDTO(s) from Sector s where s.id=?1")
-    SectorDTO getById(Long id);
-
-    @Query("select new com.stockmarket.sector.DTO.SectorDTO(s) from Sector s order by s.id")
-    List<SectorDTO> getAll();
+    @Query("select s from Sector s order by s.id")
+    List<Sector> getAll();
 }
